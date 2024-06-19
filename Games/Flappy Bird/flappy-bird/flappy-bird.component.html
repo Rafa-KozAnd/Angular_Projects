@@ -1,0 +1,16 @@
+<div class="container" *ngIf="!gameOver">
+    <h1>Flappy Bird</h1>
+    <div class="game-area">
+      <div class="bird" [style.top.px]="gameService.bird.y" [style.left.px]="gameService.bird.x"></div>
+      <div class="pipe" *ngFor="let pipe of gameService.pipes"
+           [style.top.px]="pipe.y" [style.left.px]="pipe.x" [style.height.px]="pipe.height"></div>
+    </div>
+    <div class="score">Score: {{ gameService.score }}</div>
+  </div>
+  
+  <div class="game-over" *ngIf="gameOver">
+    <h1>Game Over</h1>
+    <p>Your score: {{ gameService.score }}</p>
+    <button (click)="restartGame()">Restart</button>
+  </div>
+  
