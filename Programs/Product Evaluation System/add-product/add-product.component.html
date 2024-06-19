@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Adicionar Produto</h2>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="newProduct.name" placeholder="Nome do Produto" />
+      <textarea [(ngModel)]="newProduct.description" placeholder="Descrição do Produto"></textarea>
+      <button (click)="addProduct()">Adicionar Produto</button>
+    </div>
+  </div>
+  

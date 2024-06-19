@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Conversor de Coordenadas GPS</h1>
+  
+    <div class="conversion">
+      <h2>De Graus Decimais para DMS</h2>
+      <input type="number" [(ngModel)]="decimalDegrees" placeholder="Graus Decimais">
+      <button (click)="convertToDMS(decimalDegrees!)">Converter para DMS</button>
+      <div *ngIf="dms">
+        <p>DMS: {{ dms.degrees }}° {{ dms.minutes }}' {{ dms.seconds }}"</p>
+      </div>
+    </div>
+  
+    <div class="conversion">
+      <h2>De DMS para Graus Decimais</h2>
+      <input type="number" #degrees placeholder="Graus">
+      <input type="number" #minutes placeholder="Minutos">
+      <input type="number" #seconds placeholder="Segundos">
+      <button (click)="convertToDecimalDegrees(degrees.valueAsNumber, minutes.valueAsNumber, seconds.valueAsNumber)">
+        Converter para Graus Decimais
+      </button>
+      <div *ngIf="decimalDegrees">
+        <p>Graus Decimais: {{ decimalDegrees }}</p>
+      </div>
+    </div>
+  </div>
+  

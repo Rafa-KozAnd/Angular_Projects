@@ -9,7 +9,7 @@
 
 # Angular_Projects
 
-- Project Name: '.# Angular_Projects';
+- Project Name: 'Angular_Projects';
 - Languages: Angular;
 - Softwares/Work Tools: 'V.S. Code';
 - Resume: ;

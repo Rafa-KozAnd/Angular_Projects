@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Feed de Notícias</h1>
+    <div class="news-item" *ngFor="let item of news">
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.content }}</p>
+      <small>{{ item.date }}</small>
+    </div>
+  </div>
+  

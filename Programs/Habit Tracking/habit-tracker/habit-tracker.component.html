@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Rastreamento de Hábitos</h1>
+  
+    <div class="form-group">
+      <input type="text" [(ngModel)]="newHabitName" placeholder="Nome do Hábito" />
+      <button (click)="addHabit()">Adicionar Hábito</button>
+    </div>
+  
+    <ul class="habit-list">
+      <li *ngFor="let habit of habits; let i = index" [class.completed]="habit.completed">
+        <span (click)="toggleHabitCompletion(i)">{{ habit.name }}</span>
+        <button (click)="removeHabit(i)">Remover</button>
+      </li>
+    </ul>
+  </div>
+  

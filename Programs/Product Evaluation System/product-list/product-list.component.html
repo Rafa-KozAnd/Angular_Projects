@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Lista de Produtos</h2>
+    <ul class="product-list">
+      <li *ngFor="let product of products">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p>Avaliação: {{ product.rating | number: '1.1-1' }} ({{ product.numberOfRatings }} avaliações)</p>
+        <div class="rating-form">
+          <input type="number" [(ngModel)]="newRating[product.id]" placeholder="Nota (1-5)" />
+          <button (click)="rateProduct(product, newRating[product.id])">Avaliar</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

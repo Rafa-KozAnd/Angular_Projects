@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Simulador de Clima</h1>
+  
+    <div class="form-group">
+      <label for="city">Selecione uma cidade:</label>
+      <select id="city" [(ngModel)]="selectedCity" (change)="getWeather()">
+        <option value="">--Selecione--</option>
+        <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+      </select>
+    </div>
+  
+    <div *ngIf="weather" class="weather-info">
+      <h2>{{ selectedCity }}</h2>
+      <p>Temperatura: {{ weather.temperature }}°C</p>
+      <p>Condição: {{ weather.condition }}</p>
+    </div>
+  </div>
+  

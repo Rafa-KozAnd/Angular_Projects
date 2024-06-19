@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>Gerador de Pseudônimos</h1>
+    <button (click)="generatePseudonym()">Gerar Pseudônimo</button>
+    <div *ngIf="pseudonym" class="pseudonym-display">
+      <h2>{{ pseudonym }}</h2>
+    </div>
+  </div>
+  

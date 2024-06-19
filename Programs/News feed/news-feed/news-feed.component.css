@@ -1,0 +1,28 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .news-item {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+  }
+  
+  .news-item h2 {
+    margin-top: 0;
+  }
+  
+  .news-item p {
+    margin: 0.5rem 0;
+  }
+  
+  .news-item small {
+    color: #666;
+  }
+  

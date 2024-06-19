@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Leitor de RSS</h1>
+  
+    <div class="form-group">
+      <input type="text" [(ngModel)]="feedUrl" placeholder="URL do Feed RSS" />
+      <button (click)="loadFeed()">Carregar Feed</button>
+    </div>
+  
+    <div *ngIf="feed">
+      <h2>{{ feed.rss.channel[0].title[0] }}</h2>
+      <ul class="news-list">
+        <li *ngFor="let item of feed.rss.channel[0].item">
+          <h3>{{ item.title[0] }}</h3>
+          <p>{{ item.description[0] }}</p>
+          <a [href]="item.link[0]" target="_blank">Leia mais</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

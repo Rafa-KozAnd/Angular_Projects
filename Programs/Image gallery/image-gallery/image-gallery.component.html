@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Galeria de Imagens</h1>
+  
+    <div class="form-group">
+      <input type="text" [(ngModel)]="newImageUrl" placeholder="URL da Imagem" />
+      <button (click)="addImage()">Adicionar Imagem</button>
+    </div>
+  
+    <div class="gallery">
+      <div class="image" *ngFor="let image of images; let i = index">
+        <img [src]="image" alt="Image" />
+        <button (click)="removeImage(i)">Remover</button>
+      </div>
+    </div>
+  </div>
+  
